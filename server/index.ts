@@ -5,10 +5,12 @@ import tableRouter from './controllers/tableController/tableController'
 import chairRouter from './controllers/chairController/chairController'
 import closetRouter from './controllers/closetController/closetController'
 import moment from 'moment';
+import cors from "cors"
 
 const app = express();
 const port = 8000;
 
+app.use(cors())
 app.use((req, _res, next) => {
     console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] IP: ${req.ip} | Path: ${req.path} | Query: ${JSON.stringify(req.query)} | Body: ${req.body}`);
     next();

@@ -1,0 +1,6 @@
+.main_page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px;
+}
